@@ -1,13 +1,18 @@
-const add = function() {
+const add = function(a, b) {
+  return a + b;
 	
 };
 
-const subtract = function() {
+const subtract = function(a, b) {
+  return a - b;
 	
 };
 
-const sum = function() {
-	
+const sum = function(...input) {
+  return input.flat()
+    .map(item => Number(item))
+    .filter(item => !isNaN(item))
+    .reduce((total, item) => total + item, 0);	
 };
 
 const multiply = function() {

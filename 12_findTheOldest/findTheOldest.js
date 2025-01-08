@@ -1,7 +1,6 @@
-const findTheOldest = function(people) {
-
+const findTheOldest = (people) => {
     people.forEach(person => {
-        if (!person.yearOfDeath) {  // Check if yearOfDeath is missing (empty or undefined)
+        if (!person.yearOfDeath) {
             person.yearOfDeath = new Date().getFullYear();
         }
     });
